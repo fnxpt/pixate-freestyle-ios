@@ -3,30 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/pixate-freestyle-ios/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="/pixate-freestyle-ios/js/google-code-prettify/prettify.css" type="text/css" rel="stylesheet">
-    <link href="/pixate-freestyle-ios/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <link href="..//css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="..//js/google-code-prettify/prettify.css" type="text/css" rel="stylesheet">
+    <link href="..//css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
     <link href="//cloud.typography.com/6299652/637262/css/fonts.css" rel="stylesheet" type="text/css">
     <!--[if lt IE 9]>
-    <script src="/pixate-freestyle-ios/js/html5shiv.js"></script>
-    <script src="/pixate-freestyle-ios/js/respond.min.js"></script>
+    <script src="..//js/html5shiv.js"></script>
+    <script src="..//js/respond.min.js"></script>
     <![endif]-->
     <!--[if IE]>
-    <link href="/pixate-freestyle-ios/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <link href="..//stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css">
     <![endif]-->
   </head>
   <body>
     <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
       <div class="navbar-header">
         <button type="button" data-toggle="collapse" data-target=".navbar-ex1-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-        <div class="navbar-brand"><a href="/pixate-freestyle-ios/index.html" class="logo-docs"><span class="pixate-logo-dark">Pixate</span><span class="logo-docs">Docs</span></a></div>
+        <div class="navbar-brand"><a href="..//index.html" class="logo-docs"><span class="pixate-logo-dark">Pixate</span><span class="logo-docs">Docs</span></a></div>
       </div>
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="/pixate-freestyle-ios/">Getting Started</a></li>
-          <li><a href="/pixate-freestyle-ios/themes/index.html">Themes</a></li>
-          <li><a href="/pixate-freestyle-ios/style-reference/index.html">Style Reference</a></li>
-          <li><a href="/pixate-freestyle-ios/dev-reference.html">Developer Reference</a></li>
+          <li><a href="..//">Getting Started</a></li>
+          <li><a href="..//themes/index.html">Themes</a></li>
+          <li><a href="..//style-reference/index.html">Style Reference</a></li>
+          <li><a href="..//dev-reference.html">Developer Reference</a></li>
           <li><a href="https://github.com/pixate/pixate-freestyle-ios">GitHub</a></li>
         </ul>
       </div>
@@ -47,14 +47,14 @@
 <h1 id="pixate-1-0-to-2-0-transition-guide">Pixate 1.0 to 2.0 Transition Guide</h1>
 <p>If you are upgrading your app from Pixate 1.0 to Pixate 2.0, you will need to change a few lines of code in order for your app to work correctly.</p>
 <p>Don&#39;t worry, it&#39;ll only take a few minutes.</p></p>
-<p>If you&#39;re using Pixate for the first time, skip this guide and check out <a href="/pixate-freestyle-ios/getting-started/index.html">Getting Started</a> instead.</p>
+<p>If you&#39;re using Pixate for the first time, skip this guide and check out <a href="..//getting-started/index.html">Getting Started</a> instead.</p>
 <p><a id="framework-setup"></a></p>
 <h2 id="framework-setup">Framework Setup</h2>
 <p>Three important changes have been made to setup:</p>
 <ul>
 <li><code>PXEngine.framework</code> is now called <code>Pixate.framework</code>. Change all import statements and calls to the Pixate framework to reflect this. Calls to PXEngine are <strong>deprecated</strong>.</li>
 <li><code>[Pixate initializeFrameworkWithKey: forUser:]</code> has been switched back to <code>[Pixate licenseKey: forUser:]</code>. This call should be placed in the <code>@appreleasepool</code> block in your main.m.</li></li>
-<li><code>CoreText.framework</code> and <code>QuartzCore.framework</code> must be added to your project. See the <a href="/pixate-freestyle-ios/getting-started/index.html">Getting Started</a> guide for instructions on adding them.</li>
+<li><code>CoreText.framework</code> and <code>QuartzCore.framework</code> must be added to your project. See the <a href="..//getting-started/index.html">Getting Started</a> guide for instructions on adding them.</li>
 </ul>
 <p><a id="css-name-changes"></a></p>
 <h2 id="css-name-changes">CSS Name Changes</h2>
@@ -79,9 +79,9 @@
         </div>
       </div>
     </div>
-    <script src="/pixate-freestyle-ios/js/jquery.js"></script>
-    <script src="/pixate-freestyle-ios/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/pixate-freestyle-ios/js/google-code-prettify/prettify.js"></script>
+    <script src="..//js/jquery.js"></script>
+    <script src="..//js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="..//js/google-code-prettify/prettify.js"></script>
     <script>
       !function ($) {
         $(function(){

@@ -34,13 +34,20 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3">
+          <div class="sidebar">
+            <ul role="navigation" class="nav side-nav">
+              <li><a href="#introduction">Introduction</a></li>
+              <li><a href="#using-themes">Using Themes</a></li>
+              <li><a href="#contributing">Contributing Themes</a></li>
+              <li><a href="#compiling">Compiling Sass</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="col-md-9"><h1 id="freestyle-themes">Freestyle Themes</h1>
+        <div class="col-md-9"><a id="introduction"></a><h1 id="freestyle-themes">Freestyle Themes</h1>
 <p>Pixate Freestyle allows you to style an entire iOS app with CSS, making an app themeable by applying different collections of CSS classes. Changing the theme of an app is as simple as switching out the CSS file used by the Pixate Freestyle framework.</p>
-<p>Hello</p>
 <p><img src="assets/pixate_blue_typography.png" alt="My image">
 <img src="assets/pixate_blue_form_styles.png" alt="My image"></p>
-<h2 id="using-themes">Using themes</h2>
+<a id="using-themes"></a><h2 id="using-themes">Using themes</h2>
 <p>If you haven&#39;t already, <a href="https://github.com/Pixate/pixate-freestyle-ios">add Pixate Freestyle to your app</a>.</p>
 <p>Themes consist of various classes that work with the Pixate Freestyle framework to style controls and views in your app. All themes have a default.css file which contains all of the styles included with the theme. A theme can also include a set of Sass files that compile into the default.css file. See more below in the  &#39;Compiling Sass&#39; section.</p>
 <h3 id="grab-a-theme">Grab a theme</h3>
@@ -49,7 +56,7 @@
 <p>If the theme contains <a href="http://sass-lang.com">Sass</a> files and you want to use them to make customization easier, add the files to your project. You will need to set up the Sass precompiler - see the &#39;Compiling Sass&#39; section below. This option makes it a lot easier to customize the styles, since it&#39;s completely modular. </p>
 <p>Otherwise, add the default.css file from the theme to your project. This contains all of the styles in the theme. </p>
 <p>Once the CSS or SCSS files are added, you can apply the contained classes to any relevant view or control by adding a <code>styleClass</code> runtime attribute in Interface Builder to the view or control, or importing <code>Pixate/Pixate.h</code> in your view controller and setting the <code>styleClass</code> property (e.g. <code>myButton.styleClass = @&quot;button small&quot;;</code>. The Pixate <a href="http://www.pixate.com/docs/framework/ios/latest/getting-started/#using_css">Getting Started</a> guide has more details on setting classes.</p>
-<h2 id="contributing-themes">Contributing themes</h2>
+<a id="contributing"></a><h2 id="contributing-themes">Contributing themes</h2>
 <p>New theme contributions are welcome. We are working on a theme guideline and a base theme that everyone can clone and modify, but in the meantime, please use the control and class names included in the <a href="https://github.com/Pixate/pixate-freestyle-ios/tree/master/themes/pixate-blue">pixate-blue theme</a>. Your theme can style any set of controls or views, and must include the following:</p>
 <ul>
 <li>A default.css file containing every style in your theme</li>
@@ -82,7 +89,7 @@ git pull upstream master</code></pre>
 </ol>
 <p><strong>IMPORTANT</strong>: By submitting a theme, you agree to allow it to be
 licensed under the terms of the <a href="https://github.com/Pixate/pixate-freestyle-ios/blob/master/LICENSE">Apache 2.0 License</a>.</p>
-<h2 id="compiling-sass">Compiling Sass</h2>
+<a id="compiling"></a><h2 id="compiling-sass">Compiling Sass</h2>
 <p>A theme may include several <a href="http://sass-lang.com">Sass</a> files that, once compiled, generate the CSS that will be used by Pixate Freestyle. Sass allows themes to be modular. You can modify variables to theme the default styles, or edit any part of the Sass to your heart&#39;s content.</p>
 <p>You can simply grab the compiled CSS file from a theme and add it to your project (see <a href="/getting-started/index.html">Getting Started</a>), or you can follow these simple steps to compile the .scss files. Once you&#39;ve installed Freestyle and added a theme&#39;s Sass files to your application, do the following:</p>
 <ul>

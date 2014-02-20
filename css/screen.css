@@ -158,33 +158,6 @@ code strong {
 .side-nav {
   margin-top: 48px; }
 
-.sidebar:before {
-  content: "";
-  background: -webkit-linear-gradient(top, white 0%, rgba(255, 255, 255, 0) 100%);
-  position: fixed;
-  margin: 0;
-  padding: 0;
-  z-index: 1;
-  display: block;
-  width: 213px;
-  height: 48px; }
-  @media (min-width: 1200px) {
-    .sidebar:before {
-      width: 262px; } }
-
-.sidebar:after {
-  content: "";
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 100%);
-  position: fixed;
-  z-index: 1;
-  display: block;
-  width: 213px;
-  bottom: 0;
-  height: 48px; }
-  @media (min-width: 1200px) {
-    .sidebar:after {
-      width: 262px; } }
-
 .screenshot {
   max-width: 100%;
   text-align: center;
