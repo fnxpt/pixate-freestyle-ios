@@ -36,55 +36,55 @@
         <div class="col-md-3">
         </div>
         <div class="col-md-9"><h1 id="freestyle-themes">Freestyle Themes</h1>
-<p>Pixate Freestyle is a toolkit for styling native mobile applications. It consists of a comprehensive collection of CSS classes that work with the <a href="http://www.pixate.com/">Pixate Framework</a> to provide an easily customized base of styles for applications. Think of it as Bootstrap for native apps. Currently, it only supports iOS 7. Android support is coming soon.</p>
-<p><img src="https://raw.github.com/Pixate/Freestyle/gh-pages/freestyle_typography.png" alt="My image">
-<img src="https://raw.github.com/Pixate/Freestyle/gh-pages/freestyle_form_styles.png" alt="My image"></p>
-<h2 id="getting-started">Getting started</h2>
-<p>Getting started with Freestyle is easy. You need to install the <a href="http://www.pixate.com">Pixate Framework</a>, add the Freestyle CSS or Sass files to your project, and apply the Freestyle classes to views and controls in your app. </p>
-<h3 id="installing-the-pixate-framework">Installing the Pixate Framework</h3>
-<p>The Pixate Framework lets you style your native iOS applications with stylesheets. If you aren&#39;t already familiar with Pixate, check out the <a href="http://www.pixate.com/docs/framework/ios/latest/getting-started/">Getting Started</a> guide to familiarize yourself with how it works. You can install it in three ways:</p>
+<p>Pixate Freestyle allows you to style an entire iOS app with CSS, making an app themeable by applying different collections of CSS classes. Changing the theme of an app is as simple as switching out the CSS file used by the Pixate Freestyle framework.</p>
+<p>Hello</p>
+<p><img src="assets/pixate_blue_typography.png" alt="My image">
+<img src="assets/pixate_blue_form_styles.png" alt="My image"></p>
+<h2 id="using-themes">Using themes</h2>
+<p>If you haven&#39;t already, <a href="https://github.com/Pixate/pixate-freestyle-ios">add Pixate Freestyle to your app</a>.</p>
+<p>Themes consist of various classes that work with the Pixate Freestyle framework to style controls and views in your app. All themes have a default.css file which contains all of the styles included with the theme. A theme can also include a set of Sass files that compile into the default.css file. See more below in the  &#39;Compiling Sass&#39; section.</p>
+<h3 id="grab-a-theme">Grab a theme</h3>
+<p>You can browse a directory of existing themes in the <a href="https://github.com/Pixate/pixate-freestyle-ios/tree/master/themes">Pixate Freestyle repo</a>. </p>
+<h3 id="add-the-theme-to-your-app">Add the theme to your app</h3>
+<p>If the theme contains <a href="http://sass-lang.com">Sass</a> files and you want to use them to make customization easier, add the files to your project. You will need to set up the Sass precompiler - see the &#39;Compiling Sass&#39; section below. This option makes it a lot easier to customize the styles, since it&#39;s completely modular. </p>
+<p>Otherwise, add the default.css file from the theme to your project. This contains all of the styles in the theme. </p>
+<p>Once the CSS or SCSS files are added, you can apply the contained classes to any relevant view or control by adding a <code>styleClass</code> runtime attribute in Interface Builder to the view or control, or importing <code>Pixate/Pixate.h</code> in your view controller and setting the <code>styleClass</code> property (e.g. <code>myButton.styleClass = @&quot;button small&quot;;</code>. The Pixate <a href="http://www.pixate.com/docs/framework/ios/latest/getting-started/#using_css">Getting Started</a> guide has more details on setting classes.</p>
+<h2 id="contributing-themes">Contributing themes</h2>
+<p>New theme contributions are welcome. We are working on a theme guideline and a base theme that everyone can clone and modify, but in the meantime, please use the control and class names included in the <a href="https://github.com/Pixate/pixate-freestyle-ios/tree/master/themes/pixate-blue">pixate-blue theme</a>. Your theme can style any set of controls or views, and must include the following:</p>
 <ul>
-<li><a href="http://download.pixate.com/">Download directly from Pixate</a>. Freestyle is already packed in this download.</li>
-<li>Install using <a href="http://cocoapods.org/">CocoaPods</a> (spec name is &#39;Pixate&#39;).</li>
-<li>Clone the Pixate Framework repo  <code>git clone git@github.com:Pixate/PixateFramework.git</code>.</li>
+<li>A default.css file containing every style in your theme</li>
+<li>A README.md file documenting the views and controls your theme styles, and ideally a screenshot of the theme in action</li>
+<li>Optional: Sass files that properly compile into a default.css file</li>
 </ul>
-<p>You can also clone the <a href="https://github.com/Pixate/Freestyle">Freestyle repo</a> and use the Showcase app as a starter app, which already has the latest release of Pixate installed. Note that the Showcase uses the Freestyle CSS file, so you can try it out without installing Sass. If you want to play around with variables and such, you&#39;ll need to follow the instructions below for compiling the Sass files.</p>
-<p>Once you have the framework, follow the <a href="http://www.pixate.com/docs/framework/ios/latest/getting-started/">Getting Started</a> guide to set up the framework in your application. <strong>Note that you will need Pixate 2.0.1 or greater for Freestyle to work properly</strong>. Also, the Pixate Framework now includes Freestyle, so you won&#39;t need to download Freestyle separately.</p>
-<h3 id="get-freestyle">Get Freestyle</h3>
-<p>You can grab Freestyle two ways:</p>
-<ul>
-<li><a href="https://github.com/Pixate/Freestyle/archive/master.zip">Download the latest release</a>.</li>
-<li>Clone this repo <code>git clone git@github.com:Pixate/Freestyle.git</code>.</li>
-</ul>
-<p>Note the Freestyle currently only contains styles for apps targeting iOS 7. You can certainly add your own styles for iOS 6.</p>
-<h3 id="add-freestyle-to-your-app">Add Freestyle to your app</h3>
-<p>Once you&#39;ve <a href="http://download.pixate.com/">downloaded</a> and <a href="http://www.pixate.com/docs/framework/ios/latest/getting-started/">installed</a> Pixate and downloaded Freestyle, you have two options to add Freestyle to your project:</p>
-<ul>
-<li>Add the default.css file from the Freestyle repo to your project. This contains all of the styles, but will be harder to customize as it is not modular. </li>
-<li>Add the <a href="http://sass-lang.com">Sass</a> files to your project. You will need to set up the Sass precompiler - see the &#39;Compiling Sass&#39; section below. This option makes it a lot easier to customize the styles, since it&#39;s completely modular. </li>
-</ul>
-<p>Once the CSS or SCSS files are added, you can apply the classes to any relevant view or control by adding a <code>styleClass</code> runtime attribute in Interface Builder to the view or control, or importing <code>Pixate/Pixate.h</code> in your view controller and setting the <code>styleClass</code> property (e.g. <code>myButton.styleClass = @&quot;button small&quot;;</code>. The Pixate <a href="http://www.pixate.com/docs/framework/ios/latest/getting-started/#using_css">Getting Started</a> guide has more details on setting classes.</p>
-<h3 id="what-s-included-in-the-toolkit">What&#39;s included in the toolkit</h3>
-<pre><code>Freestyle/
-├── css/
-│   └── default.css
-├── scss/
-│   ├── default.scss
-│   ├── base.scss
-│   ├── buttons.scss
-│   ├── collections.scss
-│   ├── forms.scss
-│   ├── icons.scss
-│   ├── tables.scss
-│   ├── type.scss
-│   └── variables.scss
-└── PixateFreestyleShowcase/
-    ├── PixateFreestyleShowcase/
-    ├── PixateFreestyleShowcaseTests
-    └── PixateFreestyleShowcase.xcodeproj</code></pre>
+<p>To contribute your theme:</p>
+<ol>
+<li><p><a href="http://help.github.com/fork-a-repo/">Fork</a> Pixate Freestyle, clone your fork,
+and configure the remotes:</p>
+<pre><code class="lang-bash"># Clone your fork of the repo into the current directory
+git clone https://github.com/&lt;your-username&gt;/pixate-freestyle-ios.git
+# Navigate to the newly cloned directory
+cd pixate-freestyle-ios
+# Assign the original repo to a remote called &quot;upstream&quot;
+git remote add upstream https://github.com/Pixate/pixate-freestyle-ios</code></pre>
+</li>
+<li><p>If you cloned a while ago, get the latest changes from upstream:</p>
+<pre><code class="lang-bash">git checkout master
+git pull upstream master</code></pre>
+</li>
+<li><p>Commit your new theme in the /themes directory</p>
+</li>
+<li><p>Push your topic branch up to your fork:</p>
+<pre><code class="lang-bash">git push origin master</code></pre>
+</li>
+<li><p><a href="https://help.github.com/articles/using-pull-requests/">Open a Pull Request</a>
+ with a clear title and description against the <code>master</code> branch.</p>
+</li>
+</ol>
+<p><strong>IMPORTANT</strong>: By submitting a theme, you agree to allow it to be
+licensed under the terms of the <a href="https://github.com/Pixate/pixate-freestyle-ios/blob/master/LICENSE">Apache 2.0 License</a>.</p>
 <h2 id="compiling-sass">Compiling Sass</h2>
-<p>Included in Freestyle are several <a href="http://sass-lang.com">Sass</a> files that, once compiled, generate the Freestyle CSS that will be used by the Pixate Framework. Sass allows Freestyle to be modular. You can modify variables to theme the default styles, or edit any part of the Sass to your heart&#39;s content.</p>
-<p>You can simply grab the compiled CSS file from this repo and add it to your project (see <a href="http://www.pixate.com/docs/framework/ios/latest/getting-started/">Getting Started</a>), or you can follow these simple steps to compile the .scss files. Once you&#39;ve installed Pixate and added the Freestyle Sass files to your application, do the following:</p>
+<p>A theme may include several <a href="http://sass-lang.com">Sass</a> files that, once compiled, generate the CSS that will be used by Pixate Freestyle. Sass allows themes to be modular. You can modify variables to theme the default styles, or edit any part of the Sass to your heart&#39;s content.</p>
+<p>You can simply grab the compiled CSS file from a theme and add it to your project (see <a href="/getting-started/index.html">Getting Started</a>), or you can follow these simple steps to compile the .scss files. Once you&#39;ve installed Freestyle and added a theme&#39;s Sass files to your application, do the following:</p>
 <ul>
 <li>Install <a href="http://sass-lang.com/install">Sass</a> - this requires Ruby, which you should already have if you&#39;re running OS X.</li>
 <li>If you already added the Freestyle default.css file to your project, remove it (it will be replaced by the compiled Sass files).</li>
@@ -100,32 +100,6 @@ ${GEM_HOME}/bin/sass ${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/default.scss ${
 <li>Do not put anything under <code>Input Files</code> or <code>Output Files</code></li>
 </ul>
 <p>Now, when you build your project, the Sass files should be compiled into a default.css file that will be used by the Pixate Framework. </p>
-<h2 id="documentation">Documentation</h2>
-<p>We will be building docs for Freestyle once the beta stabilizes. In the meantime, please submit any questions on the <a href="https://github.com/Pixate/Freestyle/issues">Issues page</a>.  </p>
-<p>The Showcase app is meant to serve as an example application using all of the styles, as well as a reference app for starting a new project or creating themes. We used Storyboards in the app to make it easy to play with, but we had to write a few lines of code to make certain things work.</p>
-<p>To enable static scroll views (used for the typography and form pages) that are taller than the device resolution, we added the following viewDidLayoutSubviews method to our view controllers:</p>
-<pre><code>- (void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-
-    // enable scrolling in the scrollView
-    [self.scrollView layoutIfNeeded];
-    self.scrollView.contentSize = self.contentView.bounds.size ;
-
-    // place the scrollView in the proper position
-    CGRect screenBound = [[UIScreen mainScreen] bounds];
-    CGFloat width = screenBound.size.width;
-    CGFloat tabBarHeight = [[self.tabBarController tabBar] frame].size.height;
-    CGFloat navBarHeight = [[self.navigationController navigationBar] frame].size.height;
-    CGFloat height = screenBound.size.height - tabBarHeight - navBarHeight;
-    self.scrollView.frame = CGRectMake(0, 0, width, height);
-}</code></pre>
-<p>Additionally, to set the height of these scroll views, we changed the <code>Size</code> setting to <code>Freeform</code> under Simulated Metrics in the Attributes inspector for the view controller. </p>
-<p>We also needed code in other places to generate our table view, collection view, and our icons. </p>
-<h2 id="feedback-and-bugs">Feedback and Bugs</h2>
-<p>We are releasing Freestyle in beta because we really want to hear feedback or feature requests. What would an ideal mobile app toolkit look like for you? <a href="https://github.com/Pixate/Freestyle/issues/new">Please open a new issue</a>. </p>
-<p>Before opening a new issue, please search existing issues.</p>
-<h2 id="contributing">Contributing</h2>
-<p>We currently are not accepting any pull requests, as we want to get Freestyle 1.0 officially out first. In the future we&#39;ll welcome contributions with open arms, including new themes and samples from the community.</p>
 
         </div>
       </div>
