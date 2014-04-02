@@ -56,7 +56,11 @@
 	
 	<option value="//api/name/styleCSS">&nbsp;&nbsp;&nbsp;&nbsp;styleCSS</option>
 	
+	<option value="//api/name/styleChangeable">&nbsp;&nbsp;&nbsp;&nbsp;styleChangeable</option>
+	
 	<option value="//api/name/styleClass">&nbsp;&nbsp;&nbsp;&nbsp;styleClass</option>
+	
+	<option value="//api/name/styleClasses">&nbsp;&nbsp;&nbsp;&nbsp;styleClasses</option>
 	
 	<option value="//api/name/styleId">&nbsp;&nbsp;&nbsp;&nbsp;styleId</option>
 	
@@ -135,7 +139,11 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/styleCSS">styleCSS</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/styleChangeable">styleChangeable</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/styleClass">styleClass</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/styleClasses">styleClasses</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/styleId">styleId</a></span></li>
 	
@@ -240,6 +248,20 @@
 		<code><a href="#//api/name/styleClass">&nbsp;&nbsp;styleClass</a></code>
 		<span class="tooltip"><p>The CSS classes associated with this styleable object. One or more classes may be specified by delimiting each with
 whitespace</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/styleClasses">&nbsp;&nbsp;styleClasses</a></code>
+		<span class="tooltip"><p>Return an array of the <a href="#//api/name/styleClass">styleClass</a> separated by whitespace for faster performance</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/styleChangeable">&nbsp;&nbsp;styleChangeable</a></code>
+		<span class="tooltip"><p>For support in cache, programing change style or class style</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	<span class="task-item-suffix">required method</span>
@@ -743,6 +765,47 @@ method will assume this method was called and it returned NO</p></span>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/styleChangeable" title="styleChangeable"></a>
+	<h3 class="subsubtitle method-title">styleChangeable</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>For support in cache, programing change style or class style</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) BOOL styleChangeable</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>For support in cache, programing change style or class style</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PXStyleable.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/styleClass" title="styleClass"></a>
 	<h3 class="subsubtitle method-title">styleClass</h3>
 	
@@ -769,6 +832,47 @@ whitespace</p>
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>The CSS classes associated with this styleable object. One or more classes may be specified by delimiting each with
 whitespace</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PXStyleable.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/styleClasses" title="styleClasses"></a>
+	<h3 class="subsubtitle method-title">styleClasses</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return an array of the <a href="#//api/name/styleClass">styleClass</a> separated by whitespace for faster performance</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSArray *styleClasses</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Return an array of the <a href="#//api/name/styleClass">styleClass</a> separated by whitespace for faster performance</p>
 	</div>
 	
 	
@@ -1456,7 +1560,7 @@ method will assume this method was called and it returned NO</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 Pixate, Inc. All rights reserved. (Last updated: 2014-02-20)</span><br />
+						<p><span class="copyright">&copy; 2014 Pixate, Inc. All rights reserved. (Last updated: 2014-04-02)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						

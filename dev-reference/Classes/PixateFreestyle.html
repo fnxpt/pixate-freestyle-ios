@@ -70,6 +70,8 @@
 	
 	<option value="//api/name/selectFromStyleable:usingSelector:">&nbsp;&nbsp;&nbsp;&nbsp;+ selectFromStyleable:usingSelector:</option>
 	
+	<option value="//api/name/sharedInstance">&nbsp;&nbsp;&nbsp;&nbsp;+ sharedInstance</option>
+	
 	<option value="//api/name/styleSheetFromFilePath:withOrigin:">&nbsp;&nbsp;&nbsp;&nbsp;+ styleSheetFromFilePath:withOrigin:</option>
 	
 	<option value="//api/name/styleSheetFromSource:withOrigin:">&nbsp;&nbsp;&nbsp;&nbsp;+ styleSheetFromSource:withOrigin:</option>
@@ -103,6 +105,8 @@
 
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Extension Methods">Extension Methods</a></span></li>
 	
 </ul></li>
 
@@ -141,6 +145,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/refreshStylesWithOrientationChange">refreshStylesWithOrientationChange</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/selectFromStyleable:usingSelector:">selectFromStyleable:usingSelector:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sharedInstance">sharedInstance</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/styleSheetFromFilePath:withOrigin:">styleSheetFromFilePath:withOrigin:</a></span></li>
 	
@@ -210,7 +216,7 @@
 						
 						
 						
-						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
 
 						<ul class="task-list">
 							<li>
@@ -318,8 +324,7 @@ shows the result of merging all matching rule sets, taking specificity and dupli
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/applyStylesheets">+&nbsp;applyStylesheets</a></code>
-		<span class="tooltip"><p>Calls <a href="#//api/name/updateStylesForAllViews">updateStylesForAllViews</a>. Please call <a href="#//api/name/updateStylesForAllViews">updateStylesForAllViews</a> directly.
-@deprecated</p></span>
+		<span class="tooltip"><p>Calls <a href="#//api/name/updateStylesForAllViews">updateStylesForAllViews</a>. Please call <a href="#//api/name/updateStylesForAllViews">updateStylesForAllViews</a> directly.</p></span>
 	</span>
 	
 	
@@ -369,6 +374,21 @@ shows the result of merging all matching rule sets, taking specificity and dupli
 	<span class="tooltip">
 		<code><a href="#//api/name/clearStyleCache">+&nbsp;clearStyleCache</a></code>
 		<span class="tooltip"><p>Remove all content from Pixate&rsquo;s style cache, if one is being used</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Extension Methods" name="task_Extension Methods"></a>
+						<h3 class="subsubtitle task-title">Extension Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sharedInstance">+&nbsp;sharedInstance</a></code>
+		<span class="tooltip"><p>The shared instance of the Pixate singleton.</p></span>
 	</span>
 	
 	
@@ -435,8 +455,7 @@ shows the result of merging all matching rule sets, taking specificity and dupli
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Calls <a href="#//api/name/updateStylesForAllViews">updateStylesForAllViews</a>. Please call <a href="#//api/name/updateStylesForAllViews">updateStylesForAllViews</a> directly.
-@deprecated</p>
+		<p>Calls <a href="#//api/name/updateStylesForAllViews">updateStylesForAllViews</a>. Please call <a href="#//api/name/updateStylesForAllViews">updateStylesForAllViews</a> directly.</p>
 	</div>		
 	
     
@@ -453,8 +472,7 @@ shows the result of merging all matching rule sets, taking specificity and dupli
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Calls <a href="#//api/name/updateStylesForAllViews">updateStylesForAllViews</a>. Please call <a href="#//api/name/updateStylesForAllViews">updateStylesForAllViews</a> directly.
-@deprecated</p>
+		<p>Calls <a href="#//api/name/updateStylesForAllViews">updateStylesForAllViews</a>. Please call <a href="#//api/name/updateStylesForAllViews">updateStylesForAllViews</a> directly.</p>
 	</div>
 	
 	
@@ -1007,6 +1025,47 @@ that are in the current view tree only.</p>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/sharedInstance" title="sharedInstance"></a>
+	<h3 class="subsubtitle method-title">sharedInstance</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The shared instance of the Pixate singleton.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (PixateFreestyle *)sharedInstance</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The shared instance of the Pixate singleton.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PixateFreestyle-Private.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/styleSheetFromFilePath:withOrigin:" title="styleSheetFromFilePath:withOrigin:"></a>
 	<h3 class="subsubtitle method-title">styleSheetFromFilePath:withOrigin:</h3>
 	
@@ -1419,7 +1478,7 @@ that are in the current view tree only.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 Pixate, Inc. All rights reserved. (Last updated: 2014-02-20)</span><br />
+						<p><span class="copyright">&copy; 2014 Pixate, Inc. All rights reserved. (Last updated: 2014-04-02)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						
