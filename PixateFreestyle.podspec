@@ -30,6 +30,6 @@ Pod::Spec.new do |s|
   s.source_files = 'PixateFreestyle.framework/Versions/A/Headers/*.h'
   s.preserve_paths = 'PixateFreestyle.framework'
   s.frameworks = 'CoreText', 'QuartzCore', 'UIKit', 'CoreGraphics', 'PixateFreestyle'
-  s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/PixazteFreestyle"' }
+  s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/PixateFreestyle"' }
   #s.prepare_command = 'open "http://www.pixate.com/docs/framework/ios/latest/getting-started/index.html#app_setup" || true'
 end
