@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   }
   s.author       = { "Pixate" => "info@pixate.com" }
   s.platform     = :ios, '5.0'
-  s.source       = { :http => "https://dl.dropboxusercontent.com/s/7bc1embtexvl2t0/PixateFreestyle.framework.zip?dl=1&token_hash=AAFgkNpIbXG0RFR7Pm13JMoOTAWu2qQmhKN6t7AtsscJtQ" }
+  s.source       = { :http => "https://dl.dropboxusercontent.com/s/7bc1embtexvl2t0/PixateFreestyle.framework.zip" }
   s.source_files = 'PixateFreestyle.framework/Versions/A/Headers/*.h'
   s.preserve_paths = 'PixateFreestyle.framework'
   s.frameworks = 'CoreText', 'QuartzCore', 'UIKit', 'CoreGraphics', 'PixateFreestyle'
